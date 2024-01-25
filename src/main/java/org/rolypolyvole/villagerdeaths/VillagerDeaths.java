@@ -58,9 +58,9 @@ public final class VillagerDeaths extends JavaPlugin implements Listener {
             .append(Component.space())
             .append(Component.text("[", TextColor.color(255, 165, 0)))
             .append(Component.text(x, NamedTextColor.GREEN))
-            .append(Component.text(", ", TextColor.color(255, 165, 0)))
+            .append(Component.text(", ", NamedTextColor.YELLOW))
             .append(Component.text(y, NamedTextColor.GREEN))
-            .append(Component.text(", ", TextColor.color(255, 165, 0)))
+            .append(Component.text(", ", NamedTextColor.YELLOW))
             .append(Component.text(z, NamedTextColor.GREEN))
             .append(Component.text("]", TextColor.color(255, 165, 0)))
             .build();
