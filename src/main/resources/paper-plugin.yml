@@ -1,0 +1,4 @@
+name: VillagerDeaths
+version: '${version}'
+main: org.rolypolyvole.villagerdeaths.VillagerDeaths
+api-version: '1.20'

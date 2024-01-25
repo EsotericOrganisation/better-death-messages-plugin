@@ -1,0 +1,5 @@
+# enum | "everyone" or "within-radius"
+announce-to: "everyone"
+
+# int | Radius in blocks
+announce-radius: 1000
