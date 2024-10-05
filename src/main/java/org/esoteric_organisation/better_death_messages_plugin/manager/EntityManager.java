@@ -27,7 +27,7 @@ public class EntityManager {
             return deathMessageConfiguration.getBoolean("wandering-traders.enabled");
         } else if (entity instanceof Villager) {
             return deathMessageConfiguration.getBoolean("villagers.enabled");
-        } else if (entity instanceof Tameable tameableEntity && (tameableEntity.getOwner() != null || tameableEntity.getPersistentDataContainer().get(plugin.getShouldAnnounceEntityDeathKey(), PersistentDataType.BOOLEAN))) {
+        } else if (entity instanceof Tameable tamableEntity && (tamableEntity.getOwner() != null || tamableEntity.getPersistentDataContainer().get(plugin.getShouldAnnounceEntityDeathKey(), PersistentDataType.BOOLEAN))) {
             return deathMessageConfiguration.getBoolean("pets.enabled");
         } else if (entity.customName() != null) {
             return deathMessageConfiguration.getBoolean("named-entities.enabled");

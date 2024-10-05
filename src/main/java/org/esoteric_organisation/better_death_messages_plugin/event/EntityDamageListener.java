@@ -21,18 +21,18 @@ public class EntityDamageListener implements Listener {
 
     @EventHandler
     public void onEntityDamage(EntityDamageEvent event) {
-        if (!(event.getEntity() instanceof Tameable tameableEntity)) {
+        if (!(event.getEntity() instanceof Tameable tamableEntity)) {
             return;
         }
 
-        if (!(tameableEntity instanceof Cat || tameableEntity instanceof Wolf || tameableEntity instanceof Parrot)) {
+        if (!(tamableEntity instanceof Cat || tamableEntity instanceof Wolf || tamableEntity instanceof Parrot)) {
             return;
         }
 
-        if (event.getDamage() >= tameableEntity.getHealth()) {
-            tameableEntity.setOwner(null);
+        if (event.getDamage() >= tamableEntity.getHealth()) {
+            tamableEntity.setOwner(null);
 
-            PersistentDataContainer dataContainer = tameableEntity.getPersistentDataContainer();
+            PersistentDataContainer dataContainer = tamableEntity.getPersistentDataContainer();
             dataContainer.set(plugin.getShouldAnnounceEntityDeathKey(), PersistentDataType.BOOLEAN, true);
         }
     }
