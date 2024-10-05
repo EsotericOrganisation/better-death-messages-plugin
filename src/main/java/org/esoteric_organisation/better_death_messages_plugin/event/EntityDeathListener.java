@@ -20,8 +20,6 @@ import org.bukkit.event.entity.EntityDeathEvent;
 import org.esoteric_organisation.better_death_messages_plugin.BetterDeathMessagesPlugin;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Objects;
-
 public class EntityDeathListener implements Listener {
 
     private final BetterDeathMessagesPlugin plugin;
