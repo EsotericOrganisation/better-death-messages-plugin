@@ -1,4 +1,4 @@
-package org.rolypolyvole.better_death_messages_plugin.event;
+package org.esoteric_organisation.better_death_messages_plugin.event;
 
 import org.bukkit.entity.Cat;
 import org.bukkit.entity.Parrot;
@@ -9,7 +9,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
-import org.rolypolyvole.better_death_messages_plugin.BetterDeathMessagesPlugin;
+import org.esoteric_organisation.better_death_messages_plugin.BetterDeathMessagesPlugin;
 
 public class EntityDamageListener implements Listener {
 

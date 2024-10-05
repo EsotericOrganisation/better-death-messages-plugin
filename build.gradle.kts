@@ -17,7 +17,7 @@ fun capitaliseFirstLetter(string: String): String {
 }
 
 fun snakecase(kebabcaseString: String): String {
-  return kebabcaseString.lowercase().replace(kebabcaseStringSeparator, snakecaseStringSeparator)
+  return kebabcaseString.lowercase().replace(kebabcaseStringSeparator, snakecaseStringSeparator).replace(" ", snakecaseStringSeparator)
 }
 
 fun pascalcase(kebabcaseString: String): String {
@@ -32,13 +32,13 @@ fun pascalcase(kebabcaseString: String): String {
   return pascalCaseString
 }
 
-val mainProjectAuthor = "rolyPolyVole"
+val mainProjectAuthor = "Esoteric Organisation"
 val topLevelDomain = "org"
-val projectAuthors = listOfNotNull(mainProjectAuthor, "Slqmy")
+val projectAuthors = listOfNotNull(mainProjectAuthor, "rolyPolyVole", "Esoteric Enderman")
 
-group = topLevelDomain + groupStringSeparator + mainProjectAuthor.lowercase() + groupStringSeparator + snakecase(rootProject.name)
+group = topLevelDomain + groupStringSeparator + snakecase(mainProjectAuthor) + groupStringSeparator + snakecase(rootProject.name)
 version = "1.0.0-SNAPSHOT"
-description = "A very simple plugin which displays death messages for important entities."
+description = "A very simple Minecraft plugin which displays death messages for important entities."
 
 val javaVersion = 21
 val paperApiVersion = "1.21"
@@ -56,7 +56,7 @@ repositories {
 }
 
 dependencies {
-  paperweight.paperDevBundle(paperApiVersion + "-R0.1-SNAPSHOT")
+  paperweight.paperDevBundle("$paperApiVersion-R0.1-SNAPSHOT")
 
   implementation("net.dv8tion", "JDA", "5.0.0")
 }
@@ -73,6 +73,7 @@ tasks {
 
 bukkitPluginYaml {
   main = project.group.toString() + groupStringSeparator + pascalcase(rootProject.name)
+  description = project.description
   load = BukkitPluginYaml.PluginLoadOrder.STARTUP
   authors = projectAuthors
   apiVersion = paperApiVersion

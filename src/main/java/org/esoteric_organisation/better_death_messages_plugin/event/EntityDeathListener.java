@@ -1,4 +1,4 @@
-package org.rolypolyvole.better_death_messages_plugin.event;
+package org.esoteric_organisation.better_death_messages_plugin.event;
 
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.entities.MessageEmbed;
@@ -13,17 +13,13 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.craftbukkit.entity.CraftLivingEntity;
 import org.bukkit.craftbukkit.entity.CraftPlayer;
-import org.bukkit.entity.Cat;
 import org.bukkit.entity.LivingEntity;
-import org.bukkit.entity.Parrot;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Tameable;
-import org.bukkit.entity.Wolf;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.jetbrains.annotations.NotNull;
-import org.rolypolyvole.better_death_messages_plugin.BetterDeathMessagesPlugin;
+import org.esoteric_organisation.better_death_messages_plugin.BetterDeathMessagesPlugin;
 
 import java.util.Objects;
 
