@@ -10,6 +10,7 @@ import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.esoteric_organisation.better_death_messages_plugin.BetterDeathMessagesPlugin;
+import org.jetbrains.annotations.NotNull;
 
 public class EntityDamageListener implements Listener {
 
@@ -20,7 +21,7 @@ public class EntityDamageListener implements Listener {
     }
 
     @EventHandler
-    public void onEntityDamage(EntityDamageEvent event) {
+    public void onEntityDamage(@NotNull EntityDamageEvent event) {
         if (!(event.getEntity() instanceof Tameable tamableEntity)) {
             return;
         }

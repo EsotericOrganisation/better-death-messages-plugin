@@ -17,7 +17,7 @@ public final class BetterDeathMessagesPlugin extends JavaPlugin {
 
     private EntityManager entityManager;
 
-    private NamespacedKey shouldAnnounceEntityDeathKey = new NamespacedKey(this, "should_announce_death");
+    private final NamespacedKey shouldAnnounceEntityDeathKey = new NamespacedKey(this, "should_announce_death");
 
     public JDA getJda() {
         return jda;
