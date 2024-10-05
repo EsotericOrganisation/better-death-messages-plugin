@@ -58,12 +58,10 @@ public class EntityDeathListener implements Listener {
 
         String deathMessageString = deathMessage.getString();
 
-        boolean announceToAll = Objects.equals(configuration.getString("announce-to"), "everyone");
-
-        int announcementRadius = Math.abs(configuration.getInt("announcement-radius"));
+        int announcementRadius = configuration.getInt("announcement-radius");
 
         for (Player player : deathLocation.getWorld().getPlayers()) {
-            if (announceToAll || deathLocation.distance(player.getLocation()) <= announcementRadius) {
+            if (announcementRadius == -1 || deathLocation.distance(player.getLocation()) <= announcementRadius) {
                 ServerPlayer serverPlayer = ((CraftPlayer) player).getHandle();
 
                 serverPlayer.displayClientMessage(
