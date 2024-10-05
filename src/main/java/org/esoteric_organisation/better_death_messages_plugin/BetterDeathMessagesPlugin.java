@@ -13,11 +13,9 @@ import org.esoteric_organisation.better_death_messages_plugin.manager.EntityMana
 
 public final class BetterDeathMessagesPlugin extends JavaPlugin {
 
-    private JDA jda;
-
-    private EntityManager entityManager;
-
     private final NamespacedKey shouldAnnounceEntityDeathKey = new NamespacedKey(this, "should_announce_death");
+    private JDA jda;
+    private EntityManager entityManager;
 
     public JDA getJda() {
         return jda;

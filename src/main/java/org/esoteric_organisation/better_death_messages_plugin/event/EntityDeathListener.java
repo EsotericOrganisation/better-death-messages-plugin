@@ -7,7 +7,6 @@ import net.dv8tion.jda.api.requests.restaction.MessageCreateAction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerPlayer;
-
 import org.bukkit.Location;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -18,8 +17,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
-import org.jetbrains.annotations.NotNull;
 import org.esoteric_organisation.better_death_messages_plugin.BetterDeathMessagesPlugin;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
