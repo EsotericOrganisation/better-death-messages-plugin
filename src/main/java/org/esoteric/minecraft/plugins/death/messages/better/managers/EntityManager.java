@@ -1,4 +1,4 @@
-package org.esoteric_organisation.better_death_messages_plugin.manager;
+package org.esoteric.minecraft.plugins.death.messages.better.managers;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -7,7 +7,7 @@ import org.bukkit.entity.Tameable;
 import org.bukkit.entity.Villager;
 import org.bukkit.entity.WanderingTrader;
 import org.bukkit.persistence.PersistentDataType;
-import org.esoteric_organisation.better_death_messages_plugin.BetterDeathMessagesPlugin;
+import org.esoteric.minecraft.plugins.death.messages.better.BetterDeathMessagesPlugin;
 
 public class EntityManager {
 

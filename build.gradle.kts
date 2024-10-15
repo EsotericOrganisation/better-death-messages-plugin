@@ -36,7 +36,7 @@ val mainProjectAuthor = "Esoteric Organisation"
 val topLevelDomain = "org"
 val projectAuthors = listOfNotNull(mainProjectAuthor, "rolyPolyVole", "Esoteric Enderman")
 
-group = topLevelDomain + groupStringSeparator + snakecase(mainProjectAuthor) + groupStringSeparator + snakecase(rootProject.name)
+group = topLevelDomain + groupStringSeparator + "esoteric"
 version = "1.0.0-SNAPSHOT"
 description = "A very simple Minecraft plugin which displays death messages for important entities."
 
@@ -72,9 +72,12 @@ tasks {
 }
 
 bukkitPluginYaml {
-  main = project.group.toString() + groupStringSeparator + pascalcase(rootProject.name)
+  name = "BetterDeathMessages"
   description = project.description
-  load = BukkitPluginYaml.PluginLoadOrder.STARTUP
   authors = projectAuthors
+
+  version = project.version.toString()
   apiVersion = paperApiVersion
+  main = project.group.toString() + groupStringSeparator + "minecraft.plugins.death.messages.better" + groupStringSeparator + pascalcase(rootProject.name)
+  load = BukkitPluginYaml.PluginLoadOrder.STARTUP
 }

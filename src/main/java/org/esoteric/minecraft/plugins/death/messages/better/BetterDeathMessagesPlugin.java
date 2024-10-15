@@ -1,4 +1,4 @@
-package org.esoteric_organisation.better_death_messages_plugin;
+package org.esoteric.minecraft.plugins.death.messages.better;
 
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -7,9 +7,9 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.esoteric_organisation.better_death_messages_plugin.event.EntityDamageListener;
-import org.esoteric_organisation.better_death_messages_plugin.event.EntityDeathListener;
-import org.esoteric_organisation.better_death_messages_plugin.manager.EntityManager;
+import org.esoteric.minecraft.plugins.death.messages.better.event.listeners.EntityDamageListener;
+import org.esoteric.minecraft.plugins.death.messages.better.event.listeners.EntityDeathListener;
+import org.esoteric.minecraft.plugins.death.messages.better.managers.EntityManager;
 
 public final class BetterDeathMessagesPlugin extends JavaPlugin {
 
